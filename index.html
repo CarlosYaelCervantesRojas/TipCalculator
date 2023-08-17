@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <script src="./main.js" defer></script>
+    <title>Tip calculator app</title>
+
+  </head>
+  <body>
+
+    <div class="contenedorPrincipal">
+
+      <div class="logo">
+        <img src="./images/logo.svg" alt="splitter">
+      </div>
+      <div class="contenedor">
+
+
+        <div class="calculadora">
+
+          <div class="cajaIzquierda">
+
+            <div class="cajaBill">
+
+              <label class="labelIzqFormat" for="bill">Bill</label>
+              <div class="cajaInputBill">
+                <div class="icon">
+                  <img src="./images/icon-dollar.svg" alt="icon-dollar">
+                </div>
+                <input placeholder="0" class="inputFormat" id="bill" type="number">
+              </div>
+
+            </div>
+
+            <form>
+              <span class="labelIzqFormat">Select Tip %</span>
+              <div class="botones1">
+                <button value="5" class="tipBoton selectInput" type="button">5%</button>
+                <button value="10" class="tipBoton selectInput" type="button">10%</button>
+                <button value="15" class="tipBoton selectInput" type="button">15%</button>
+              </div>
+              <div class="botones2">
+                <button value="25" class="tipBoton selectInput" type="button">25%</button>
+                <button value="50" class="tipBoton selectInput" type="button">50%</button>
+                <input class="tipInput selectInput custom" type="number" placeholder="Custom">
+              </div>
+            </form>
+
+            <div class="cajaNumberPeople">
+
+              <label class="labelIzqFormat" for="numeroPersonas">Number of People</label>
+              <span class="error noPuede">Can't be zero</span>
+              <div class="cajaInputNumeroPersonas">
+                <div class="icon">
+                  <img src="./images/icon-person.svg" alt="icon-person">
+                </div>
+                <input placeholder="0" id="numeroPersonas" class="inputFormat" type="number" step="1">
+              </div>
+
+            </div>
+              
+          </div>
+
+          <div class="cajaDerecha">
+
+            <div class="tipAmount">
+              <div class="textAmount">
+                <span class="labelDerFormat">Tip Amount</span>
+                <span class="labelDerFormat2">/ person</span>
+              </div>
+              <div class="tipAmounOut">
+                <input class="inputTotalFormat" id="tipAmountOutput" placeholder="$0.00" type="">
+              </div>
+            </div>
+
+            <div class="total">
+              <div class="textTotal">
+                <span class="labelDerFormat">Total</span>
+                <span class="labelDerFormat2">/ person</span>
+              </div>
+              <div class="totalOut">
+                <input class="inputTotalFormat" id="totalOutput" placeholder="$0.00" type="text">
+              </div>
+            </div>
+
+            <div class="resetBoton">
+              <button type="reset" class="botonReset" disabled>RESET</button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    
+  </body>
+</html>
