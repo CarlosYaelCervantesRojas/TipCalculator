@@ -66,7 +66,9 @@ function errorCantidad(){
 }
 
 resetBoton.addEventListener('click', ()=>{
-    boton.classList.remove('selected');
+    tipInput.forEach(boton => {
+        boton.classList.remove('selected');
+    });
     custom.classList.remove('selectedCustom');
     billInput.value = undefined;
     numberPeopleInput.value = undefined;
