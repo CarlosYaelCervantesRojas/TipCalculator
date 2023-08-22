@@ -11,7 +11,7 @@ const bordeError = document.querySelector('.cajaInputNumeroPersonas');
 const error = document.querySelector('.error');
 
 let bill;
-let tipPerc;
+let tipPerc = 0;
 let numPeo;
 
 billInput.addEventListener('input', ()=>{
@@ -22,11 +22,17 @@ billInput.addEventListener('input', ()=>{
 tipInput.forEach(boton =>{
     boton.addEventListener('click', (e)=>{
         e.preventDefault();
+        tipInput.forEach(boton =>{
+            boton.classList.remove('selected');
+            custom.classList.remove('selectedCustom');
+        });
+        boton.classList.add('selected');
         tipPerc = parseInt(boton.value);
         calcular(); 
     });
 });
 custom.addEventListener('input', ()=>{
+    custom.classList.add('selectedCustom');
     tipPerc = parseInt(custom.value);
     calcular(); 
 });
