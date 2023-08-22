@@ -66,6 +66,8 @@ function errorCantidad(){
 }
 
 resetBoton.addEventListener('click', ()=>{
+    boton.classList.remove('selected');
+    custom.classList.remove('selectedCustom');
     billInput.value = undefined;
     numberPeopleInput.value = undefined;
     custom.value = undefined;
